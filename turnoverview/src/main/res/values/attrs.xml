@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OverTurn">
+        <attr name="posLayout" format="reference" />
+        <attr name="negLayout" format="reference" />
+        <attr name="overTurn_time" format="integer" />
+    </declare-styleable>
+
+</resources>
