@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bigflower.turnover.R;
 import com.bigflower.turnoverview.OverTurnView;
 
 
@@ -21,36 +20,43 @@ public class OverTurnCard extends OverTurnView {
 
     public OverTurnCard(Context context) {
         super(context);
-        findPosViews();
+
     }
 
     public OverTurnCard(Context context, AttributeSet attrs) {
         super(context, attrs);
-        findPosViews();
+
     }
 
     public OverTurnCard(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        findPosViews();
+
     }
 
-
-    public void findPosViews(){
-        View posView = getPosView();
-
-        mTextView = (TextView) posView.findViewById(R.id.posLayout_text2);
-//
-    }
 
     public void setmTextView(String text){
         mTextView.setText(text);
     }
 
+    /**
+     * 在控件初始化的时候即执行
+     * @param posView
+     */
+    @Override
+    public void posShow(View posView) {
+        super.posShow(posView);
+        mTextView = (TextView) posView.findViewById(com.bigflower.turnoverview.R.id.posLayout_text2);
+    }
+
+    /**
+     * 当反转后，才执行，此时再加载反面的布局及获取控件
+     * @param negView
+     */
     @Override
     public void negShow(View negView) {
         super.negShow(negView);
-        button1 = (Button) negView.findViewById(R.id.negLayout_bt1);
-        button2 = (Button) negView.findViewById(R.id.negLayout_bt2);
+        button1 = (Button) negView.findViewById(com.bigflower.turnoverview.R.id.negLayout_bt1);
+        button2 = (Button) negView.findViewById(com.bigflower.turnoverview.R.id.negLayout_bt2);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override

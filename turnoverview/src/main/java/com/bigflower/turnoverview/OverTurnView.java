@@ -192,6 +192,10 @@ public class OverTurnView extends FrameLayout implements View.OnClickListener {
         // 详细请看 OverTurnCard
     }
 
+    public void posShow(View posView){
+
+    }
+
     public void release() {
         mView = posView = negView = null ;
     }
