@@ -2,39 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/posLayout_text1"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center_vertical"
-        android:text="title"
-        android:padding="8dp"
-        android:textColor="@android:color/holo_blue_light"
-        android:textSize="14sp" />
+    <View
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="4dp"
+        android:background="#4b73ff"/>
 
-    <TextView
-        android:id="@+id/posLayout_text2"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center_vertical"
-        android:padding="8dp"
-        android:text="content"
-        android:textColor="@android:color/holo_blue_light"
-        android:textSize="18sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/posLayout_text3"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="8dp"
-        android:gravity="center_vertical"
-        android:text="introduce"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="12sp" />
+        <TextView
+            android:id="@+id/posLayout_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="title"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="14sp" />
 
+        <TextView
+            android:id="@+id/posLayout_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="content"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/posLayout_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="introduce"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp" />
+
+    </LinearLayout>
 </LinearLayout>

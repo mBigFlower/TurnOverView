@@ -17,7 +17,7 @@ import android.widget.Toast;
  * <p/>
  * This is a view, which overturns when we click it
  */
-public class OverTurnView extends FrameLayout implements View.OnClickListener {
+public class TurnOverView extends FrameLayout implements View.OnClickListener {
 
     private final static int ANIM_STATE_DEFAULT = -1;
     private final static int ANIM_STATE_POS = 0;
@@ -39,11 +39,11 @@ public class OverTurnView extends FrameLayout implements View.OnClickListener {
     private int animateState = ANIM_STATE_DEFAULT;
 
 
-    public OverTurnView(Context context) {
+    public TurnOverView(Context context) {
         super(context);
     }
 
-    public OverTurnView(Context context, AttributeSet attrs) {
+    public TurnOverView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         // 这个属性就用之前的 ItemView的了。 省事儿。
@@ -61,17 +61,16 @@ public class OverTurnView extends FrameLayout implements View.OnClickListener {
             Log.e("OverTurn", "没有添加正面Layout");
             Toast.makeText(getContext(), "没有添加正面Layout", Toast.LENGTH_LONG).show();
             return;
-        } else if(NegLayoutRes == -1) {
+        } else if (NegLayoutRes == -1) {
             Log.e("OverTurn", "没有添加反面Layout");
             Toast.makeText(getContext(), "没有添加反面Layout", Toast.LENGTH_LONG).show();
             return;
         }
 
         init();
-//        LayoutRes(PosLayoutRes, NegLayoutRes);
     }
 
-    public OverTurnView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TurnOverView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
@@ -98,6 +97,7 @@ public class OverTurnView extends FrameLayout implements View.OnClickListener {
         posViewStub.setLayoutResource(PosLayoutRes);
         negViewStub.setLayoutResource(NegLayoutRes);
         posView = posViewStub.inflate();
+        posShow(posView);
     }
 
     public View getPosView() {
@@ -186,17 +186,18 @@ public class OverTurnView extends FrameLayout implements View.OnClickListener {
                 });
     }
 
-    public void negShow(View negView){
+    public void negShow(View negView) {
         // 这个函数，哈哈，当反面第一次出现，ViewStub加载，则调用这个函数，而子类继承了这个函数后，
         // 可以在此加载反面的控件
         // 详细请看 OverTurnCard
     }
 
-    public void posShow(View posView){
+    public void posShow(View posView) {
 
     }
 
     public void release() {
-        mView = posView = negView = null ;
+        mView = posView = negView = null;
     }
+
 }

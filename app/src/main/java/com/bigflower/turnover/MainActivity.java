@@ -1,12 +1,10 @@
 package com.bigflower.turnover;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import com.bigflower.turnover.View.DividerItemDecoration;
 import com.bigflower.turnover.adapter.OverTurnAdapter;
@@ -45,5 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.addItemDecoration(new DividerItemDecoration(
                 this, DividerItemDecoration.VERTICAL_LIST));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(
+                this, DividerItemDecoration.HORIZONTAL_LIST));
     }
 }
