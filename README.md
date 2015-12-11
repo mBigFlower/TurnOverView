@@ -1,21 +1,23 @@
 # TurnOverView
 
 
-
 ## Introduce
 点击反转的控件
 
 ## Screenshots
 
-![](http://7xjizl.com1.z0.glb.clouddn.com/makepointGifturnover1.0.gif)
+![TurnOverView](http://7xjizl.com1.z0.glb.clouddn.com/makepointGifturnover1.0.gif)
+
+![TurnOverCardTri](http://7xjizl.com1.z0.glb.clouddn.com/turnover2.0.gif)
 
 ## Usage
 
 ### TurnOverView 
 
 负责加载正反两面的布局， 并实现点击翻转。 使用ViewStub避免多余的布局加载（因为反面不一定会出现）
+你只需要(1)继承这个类，(2)添加你正反两个布局即可。因为布局可以自定义，所以逻辑要你自己在新类里写哈。
 
-### TurnOverCard
+### TurnOverCard 
 
 我们需要继承TurnOverView 来实现对事件的操作与监听，如：
 
@@ -78,8 +80,17 @@
 
 没啥特殊的，就是注意添加 negLayout和posLayout
 
-## Next
+##  GridView+TurnOverView
 
-从Gif中也能看出，我把这个控件用在了GridView中，那么问题来了。怎么做到，仅允许出现一个翻转呢？敬请期待2.0
+使用 TurnOverViewOnly 并在 adapter里稍加处理，可实现图二中的，仅仅存在一个卡片可翻转（点击屏幕其他位置后，已反转的收回）
+
+### Layout
+
+ 布局不变，同上。
+
+### TurnOverCardTri
+
+详情如图二，实现三选一的反转处理。代码就不在这里贴了。[具体使用请戳我！戳我！我！](https://github.com/mBigFlower/TurnOverView/blob/master/app/src/main/java/com/bigflower/turnover/View/TurnOverCardTri.java)
+
 
 

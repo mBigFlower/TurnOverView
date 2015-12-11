@@ -6,7 +6,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bigflower.turnover.R;
 import com.bigflower.turnoverview.TurnOverViewOnly;
@@ -74,7 +73,7 @@ public class TurnOverCardTri extends TurnOverViewOnly {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "点击了Button1", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getContext(), "点击了Button1", Toast.LENGTH_LONG).show();
                 setStateOne();
                 turnOver();
             }
@@ -82,7 +81,7 @@ public class TurnOverCardTri extends TurnOverViewOnly {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "点击了Button2", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getContext(), "点击了Button2", Toast.LENGTH_LONG).show();
                 setStateTwo();
                 turnOver();
             }
@@ -90,7 +89,7 @@ public class TurnOverCardTri extends TurnOverViewOnly {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "点击了Button2", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getContext(), "点击了Button2", Toast.LENGTH_LONG).show();
                 setStateDefault();
                 turnOver();
             }
