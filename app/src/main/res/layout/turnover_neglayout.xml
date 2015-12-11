@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#4b73ff"
+        android:background="#8ac5e8"
         android:gravity="center"
         android:textColor="#fff"
         android:text="Button 1" />
@@ -23,7 +23,18 @@
         android:layout_weight="1"
         android:gravity="center"
         android:textColor="#fff"
-        android:background="#2ad081"
+        android:background="#9ee0b3"
         android:text="Button 2" />
+
+    <Button
+        android:id="@+id/negLayout_bt3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#bc9cc9"
+        android:background="#ededed"
+        android:visibility="gone"
+        android:text="Button 3" />
 
 </LinearLayout>

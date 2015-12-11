@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.bigflower.turnover.View.TurnOverCard xmlns:android="http://schemas.android.com/apk/res/android"
+<com.bigflower.turnover.View.TurnOverCardTri xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_overTurn"
     android:layout_width="match_parent"
@@ -8,5 +8,5 @@
     app:posLayout="@layout/turnover_poslayout">
 
 
-</com.bigflower.turnover.View.TurnOverCard>
+</com.bigflower.turnover.View.TurnOverCardTri>
 

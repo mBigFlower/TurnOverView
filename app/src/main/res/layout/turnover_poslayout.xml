@@ -5,10 +5,11 @@
     android:orientation="horizontal">
 
     <View
+        android:id="@+id/posLayout_line"
         android:layout_width="3dp"
         android:layout_height="match_parent"
         android:layout_marginRight="4dp"
-        android:background="#4b73ff"/>
+        android:background="@android:color/holo_blue_light"/>
 
     <LinearLayout
         android:layout_width="match_parent"

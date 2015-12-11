@@ -10,11 +10,12 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.bigflower.turnover.R;
-import com.bigflower.turnover.View.TurnOverCard;
+import com.bigflower.turnover.View.TurnOverCardTri;
 import com.bigflower.turnoverview.TurnOverViewOnly;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Bigflower on 2015/11/07.
@@ -46,14 +47,15 @@ public class OverTurnAdapter extends RecyclerView.Adapter<OverTurnAdapter.OverTu
 
     @Override
     public void onBindViewHolder(final OverTurnHolder holder, final int position) {
-        holder.turnOverCard.setmTextView(mDatas.get(position));
+        holder.turnOverCard.initCard((position) + " pos", "descreption", new Random().nextInt(3));
         holder.turnOverCard.setOnTurnOverListener(new TurnOverViewOnly.OnTurnOverListener() {
             @Override
             public void OnClick(TurnOverViewOnly viewTOV) {
-                Log.i("setOnTurnOverListener","OnClick 确实点击了");
-                Log.i("setOnTurnOverListener","此时卡片的状态："+ mTurnOverViewOnly.getAnimState());
-                if(mTurnOverViewOnly.isPos()) {
-                    mTurnOverViewOnly = viewTOV ;
+                Log.i("setOnTurnOverListener", "OnClick 确实点击了");
+                Log.i("setOnTurnOverListener", "此时卡片的状态：" + mTurnOverViewOnly.getAnimState());
+                if (mTurnOverViewOnly.isPos()) {
+                    mTurnOverViewOnly = viewTOV;
+                    ((TurnOverCardTri) viewTOV).setNegLayout();
                     viewTOV.turnOver();
                 } else {
                     mTurnOverViewOnly.turnOver();
@@ -107,13 +109,14 @@ public class OverTurnAdapter extends RecyclerView.Adapter<OverTurnAdapter.OverTu
 
     public static class OverTurnHolder extends RecyclerView.ViewHolder {
 
-        public TurnOverCard turnOverCard;
+        public TurnOverCardTri turnOverCard;
 
         public OverTurnHolder(View view) {
             super(view);
-            turnOverCard = (TurnOverCard) view.findViewById(R.id.item_overTurn);
+            turnOverCard = (TurnOverCardTri) view.findViewById(R.id.item_overTurn);
         }
 
     }
+
 
 }
