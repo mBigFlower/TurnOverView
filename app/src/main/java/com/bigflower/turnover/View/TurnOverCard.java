@@ -28,12 +28,22 @@ public class TurnOverCard extends TurnOverViewOnly {
 
     public TurnOverCard(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
 
     }
 
     public TurnOverCard(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
+    }
 
+    private void init(){
+        this.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                turnOver();
+            }
+        });
     }
 
 

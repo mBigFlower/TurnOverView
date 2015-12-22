@@ -1,13 +1,20 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#fff" />
+        android:layout_height="wrap_content"
+        android:text="one activity"
+        android:onClick="OneClick"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="grid activity"
+        android:onClick="GridClick"/>
 
-</RelativeLayout>
+</LinearLayout>

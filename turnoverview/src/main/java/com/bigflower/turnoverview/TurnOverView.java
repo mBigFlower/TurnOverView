@@ -124,7 +124,7 @@ public class TurnOverView extends FrameLayout implements View.OnClickListener {
 
     private void turnToPos() {
         animateState = ANIM_STATE_NEG1;
-        this.animate().setDuration(animTime).rotationYBy(-90).addL.setListener(new Animator.AnimatorListener() {
+        this.animate().setDuration(animTime).rotationYBy(-90).setListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
             }
