@@ -18,14 +18,14 @@
 
 ![TurnOverCardTri](http://7xjizl.com1.z0.glb.clouddn.com/turnover2.0.gif)
 
-## Usage
-
+## Base
 ### TurnOverView 
 
 负责加载正反两面的布局， 并实现点击翻转。 使用ViewStub避免多余的布局加载（因为反面不一定会出现）
 你只需要(1)继承这个类，(2)添加你正反两个布局即可。因为布局可以自定义，所以逻辑要你自己在新类里写哈。
 
-### TurnOverCard 
+## Useag
+### 1. TurnOverCard 
 
 我们需要继承TurnOverView 来实现对事件的操作与监听，如：
 
@@ -74,7 +74,7 @@
 
 ### Layout
 
-既然是控件，就需要在布局中调用，目前还不支持直接在java文件中添加，布局如下：
+既然是控件，就需要在布局中调用，布局如下：
 
 	<com.bigflower.turnover.View.OverTurnCard xmlns:android="http://schemas.android.com/apk/res/android"
 	    xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -86,9 +86,10 @@
 
 	</com.bigflower.turnover.View.OverTurnCard>
 
-没啥特殊的，就是注意添加 negLayout和posLayout
+注意添加 negLayout和posLayout
+（ps:目前还不支持直接在java文件中添加）
 
-##  GridView+TurnOverView
+## 2. GridView+TurnOverView
 
 使用 TurnOverViewOnly 并在 adapter里稍加处理，可实现图二中的，仅仅存在一个卡片可翻转（点击屏幕其他位置后，已反转的收回）
 
