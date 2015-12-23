@@ -91,5 +91,8 @@
 
 详情如图GridActivity，实现三选一的反转处理。代码就不在这里贴了。[具体使用请戳我！戳我！我！](https://github.com/mBigFlower/TurnOverView/blob/master/app/src/main/java/com/bigflower/turnover/View/TurnOverCardTri.java)
 
+## 3. TurnOverGame
 
+顾名思义，是该控件扩展的一个小游戏，没错，就是翻两个牌子后，相同的就成功，不同的就自动翻回去。
+还有bug，改天再弄。
 
