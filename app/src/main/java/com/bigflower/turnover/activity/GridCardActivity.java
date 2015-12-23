@@ -1,28 +1,30 @@
-package com.bigflower.turnover;
+package com.bigflower.turnover.activity;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import com.bigflower.turnover.R;
 import com.bigflower.turnover.View.DividerItemDecoration;
 import com.bigflower.turnover.adapter.OverTurnAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class GridCardActivity extends AppCompatActivity {
 
     private OverTurnAdapter mAdapter;
     private RecyclerView mRecyclerView;
 
     private List<String> data = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_grid_card);
 
         initRecyclerView();
         initData();

@@ -28,12 +28,22 @@ public class TurnOverCard extends TurnOverViewOnly {
 
     public TurnOverCard(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
 
     }
 
     public TurnOverCard(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
+    }
 
+    private void init(){
+        this.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                turnOver();
+            }
+        });
     }
 
 
@@ -65,16 +75,16 @@ public class TurnOverCard extends TurnOverViewOnly {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "点击了Button1", Toast.LENGTH_LONG).show();
-                mTextView3.setText("点击了Button1");
+                Toast.makeText(getContext(), "点击了Button1", Toast.LENGTH_SHORT).show();
+                mTextView2.setText("点击了Button1");
                 turnOver();
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "点击了Button2", Toast.LENGTH_LONG).show();
-                mTextView3.setText("点击了Button2");
+                Toast.makeText(getContext(), "点击了Button2", Toast.LENGTH_SHORT).show();
+                mTextView2.setText("点击了Button2");
                 turnOver();
             }
         });
