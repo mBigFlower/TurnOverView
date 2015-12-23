@@ -5,12 +5,10 @@ import android.animation.Animator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 /**
  * Created by Bigflower on 2015/12/5.
@@ -58,13 +56,9 @@ public class TurnOverView extends FrameLayout implements View.OnClickListener {
         }
 
         if (PosLayoutRes == -1) {
-            Log.e("OverTurn", "没有添加正面Layout");
-            Toast.makeText(getContext(), "没有添加正面Layout", Toast.LENGTH_LONG).show();
-            return;
+            throw new NullPointerException("There is no [posLayout], please add it in xml");
         } else if (NegLayoutRes == -1) {
-            Log.e("OverTurn", "没有添加反面Layout");
-            Toast.makeText(getContext(), "没有添加反面Layout", Toast.LENGTH_LONG).show();
-            return;
+            throw new NullPointerException("There is no [negLayout], please add it in xml");
         }
 
         init();
