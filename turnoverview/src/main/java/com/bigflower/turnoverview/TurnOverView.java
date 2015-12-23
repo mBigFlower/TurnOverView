@@ -28,14 +28,13 @@ public class TurnOverView extends FrameLayout implements View.OnClickListener {
     // XML添加的内容
     private int PosLayoutRes, NegLayoutRes;
     // 动画的时长
-    private int animTime;
+    private int animTime = 500;
 
     private View mView, posView, negView;
     private ViewStub posViewStub, negViewStub;
 
     private boolean isNegHide = true;
     private int animateState = ANIM_STATE_DEFAULT;
-
 
     public TurnOverView(Context context) {
         super(context);
@@ -69,6 +68,12 @@ public class TurnOverView extends FrameLayout implements View.OnClickListener {
         init();
     }
 
+    public TurnOverView(Context context, int posLayoutRes, int negLayoutRes) {
+        super(context);
+        PosLayoutRes = posLayoutRes;
+        NegLayoutRes = negLayoutRes;
+        init();
+    }
 
     private void init() {
         // 初始化点击事件监听
@@ -132,6 +137,7 @@ public class TurnOverView extends FrameLayout implements View.OnClickListener {
                     negViewStub.setVisibility(GONE);
                 } else {
                     animateState = ANIM_STATE_POS;
+                    toPosEnd();
                 }
             }
 
@@ -167,6 +173,7 @@ public class TurnOverView extends FrameLayout implements View.OnClickListener {
                             animate().rotationYBy(90);
                         } else {
                             animateState = ANIM_STATE_NEG;
+                            toNegEnd();
                         }
                     }
 
@@ -187,6 +194,17 @@ public class TurnOverView extends FrameLayout implements View.OnClickListener {
     }
 
     public void posShow(View posView) {
+
+    }
+
+    /**
+     * 下面两个，是动画结束后的操作，方便子类判断是否结束
+     */
+    public void toPosEnd(){
+
+    }
+
+    public void toNegEnd(){
 
     }
 

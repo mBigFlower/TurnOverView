@@ -24,6 +24,10 @@
             android:name=".activity.GridCardActivity"
             android:label="@string/title_activity_grid_card" >
         </activity>
+        <activity
+            android:name=".activity.GameActivity"
+            android:label="@string/title_activity_game" >
+        </activity>
     </application>
 
 </manifest>

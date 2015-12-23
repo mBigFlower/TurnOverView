@@ -25,4 +25,8 @@ public class MainActivity extends AppCompatActivity {
     public void GridClick(View v){
         startActivity(new Intent(this, GridCardActivity.class));
     }
+
+    public void GameClick(View v){
+        startActivity(new Intent(this, GameActivity.class));
+    }
 }

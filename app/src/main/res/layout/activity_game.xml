@@ -1,25 +1,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    tools:context=".MainActivity">
+    android:padding="12dp"
+    tools:context="com.bigflower.turnover.activity.GameActivity">
+
+    <GridLayout
+        android:id="@+id/game_cardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4">
+
+    </GridLayout>
 
     <Button
+        android:id="@+id/game_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="one activity"
-        android:onClick="OneClick"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="grid activity"
-        android:onClick="GridClick"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="game activity"
-        android:onClick="GameClick"/>
+        android:layout_marginTop="40dp"
+        android:onClick="GameButtonCLick"
+        android:text="turn over" />
 
 </LinearLayout>
