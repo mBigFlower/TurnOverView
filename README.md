@@ -81,7 +81,7 @@
 
 ## 2. GridView+TurnOverView
 
-使用 TurnOverViewOnly 并在 adapter里稍加处理，可实现图二中的，仅仅存在一个卡片可翻转（点击屏幕其他位置后，已反转的收回）
+使用 TurnOverViewOnly 并在 adapter里稍加处理，可实现图中的，仅仅存在一个卡片可翻转（点击屏幕其他位置后，已反转的收回）
 
 ### Layout
 
@@ -89,7 +89,7 @@
 
 ### TurnOverCardTri
 
-详情如图二，实现三选一的反转处理。代码就不在这里贴了。[具体使用请戳我！戳我！我！](https://github.com/mBigFlower/TurnOverView/blob/master/app/src/main/java/com/bigflower/turnover/View/TurnOverCardTri.java)
+详情如图GridActivity，实现三选一的反转处理。代码就不在这里贴了。[具体使用请戳我！戳我！我！](https://github.com/mBigFlower/TurnOverView/blob/master/app/src/main/java/com/bigflower/turnover/View/TurnOverCardTri.java)
 
 
 
