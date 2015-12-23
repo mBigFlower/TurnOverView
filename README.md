@@ -6,17 +6,7 @@
 
 ## Screenshots
 
-图一
-
-![TurnOverView](http://7xjizl.com1.z0.glb.clouddn.com/makepointGifturnover1.0.gif)
-
-
-----------
-
-
-图二
-
-![TurnOverCardTri](http://7xjizl.com1.z0.glb.clouddn.com/turnover2.0.gif)
+![](http://7xjizl.com1.z0.glb.clouddn.com/turnover3.gif)
 
 ## Base
 ### TurnOverView 
