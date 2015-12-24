@@ -9,8 +9,9 @@
 
     <GridLayout
         android:id="@+id/game_cardLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:columnCount="4">
 
     </GridLayout>
