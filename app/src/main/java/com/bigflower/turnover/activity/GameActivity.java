@@ -1,6 +1,7 @@
 package com.bigflower.turnover.activity;
 
 import android.animation.LayoutTransition;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.bigflower.turnover.R;
 import com.bigflower.turnover.View.TurnOverGame;
@@ -24,11 +26,16 @@ public class GameActivity extends AppCompatActivity {
 
     private Button gameButton;
     private GridLayout gameLayout;
+    private TextView timeTv;
     private TurnOverGame[] turnOverGame = new TurnOverGame[8];
     private List<Integer> gameCardNumber = new ArrayList<>();
 
     // 翻转的到底是哪个？
-    private TurnOverGame oneCard, otherCard ;
+    private TurnOverGame oneCard, otherCard;
+
+    private boolean isGaming;
+    private int pressTimes;
+    private int leftImgPair = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +50,8 @@ public class GameActivity extends AppCompatActivity {
     private void initViews() {
         gameButton = (Button) findViewById(R.id.game_button);
         gameLayout = (GridLayout) findViewById(R.id.game_cardLayout);
+        timeTv = (TextView) findViewById(R.id.game_timeText);
+
     }
 
     /**
@@ -87,12 +96,27 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void GameButtonCLick(View v) {
-        turnOverAll();
+        if (isGaming) {
+            isGaming = false;
+            turnOverReset();
+        } else {
+            isGaming = true;
+            turnOverAll();
+            pressTimes = 0;
+            leftImgPair = 4;
+        }
+    }
+
+    private void turnOverReset() {
+        gameLayout.removeAllViews();
+        initCardNumber();
+        initGameCard();
     }
 
     private void turnOverAll() {
         for (int i = 0; i < 8; i++) {
             turnOverGame[i].turnOver();
+            turnOverGame[i].setClickable(true);
         }
     }
 
@@ -103,22 +127,27 @@ public class GameActivity extends AppCompatActivity {
     TurnOverGame.OnTOGameListener gameListeners = new TurnOverGame.OnTOGameListener() {
         @Override
         public void OnClick(TurnOverGame v) {
-            if(oneCard == null) {
-                Log.i("OnTOGameListener", "点了第111个");
-                oneCard = v ;
+            pressTimes++;
+            if (oneCard == null) {
+                oneCard = v;
             } else {
-                otherCard = v ;
-                Log.i("OnTOGameListener", "点了第222个");
-                if(oneCard.getImageRes() != otherCard.getImageRes()) {
-                    Log.i("OnTOGameListener", "点了第二个，不等");
+                otherCard = v;
+                if (oneCard.getImageRes() != otherCard.getImageRes()) {
                     oneCard.turnOver();
                     otherCard.turnOver();
                 } else {
                     oneCard.setClickable(false);
                     otherCard.setClickable(false);
+                    leftImgPair--;
+                    // 配对成功
+                    if (leftImgPair == 0) {
+                        isGaming = false ;
+                        timeTv.setText("成功\n点击了" + pressTimes + "次");
+                    }
                 }
-                oneCard = otherCard = null ;
+                oneCard = otherCard = null;
             }
         }
     };
+
 }
