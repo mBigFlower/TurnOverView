@@ -6,7 +6,7 @@
 
 ## Screenshots
 
-![](http://7xjizl.com1.z0.glb.clouddn.com/turnover3.gif)
+![base](http://7xjizl.com1.z0.glb.clouddn.com/turnover3.gif)　　 ![game](http://7xjizl.com1.z0.glb.clouddn.com/turnover4.gif)
 
 ## Base
 ### TurnOverView 
