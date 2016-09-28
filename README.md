@@ -5,8 +5,9 @@
 点击反转的控件
 
 ## Screenshots
-
-![base](http://7xjizl.com1.z0.glb.clouddn.com/turnover3.gif)　　 ![game](http://7xjizl.com1.z0.glb.clouddn.com/turnover4.gif)
+|base|game|
+|---|---|
+|![base](http://7xjizl.com1.z0.glb.clouddn.com/turnover3.gif)　|　 ![game](http://7xjizl.com1.z0.glb.clouddn.com/turnover4.gif) |
 
 ## Base
 ### TurnOverView 
