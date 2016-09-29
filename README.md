@@ -7,7 +7,7 @@
 ## Screenshots
 |base|game|
 |---|---|
-|![base](http://7xjizl.com1.z0.glb.clouddn.com/turnover3.gif)　|　 ![game](http://7xjizl.com1.z0.glb.clouddn.com/turnover4.gif) |
+|![base](https://github.com/mBigFlower/TurnOverView/blob/master/gif/turnover3.gif)　|　 ![game](https://github.com/mBigFlower/TurnOverView/blob/master/gif/turnover4.gif) |
 
 ## Base
 ### TurnOverView 
