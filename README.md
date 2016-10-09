@@ -2,7 +2,7 @@
 
 
 ## Introduce
-点击反转的控件
+点击反转的控件 :+1:
 
 ## Screenshots
 |base|game|
